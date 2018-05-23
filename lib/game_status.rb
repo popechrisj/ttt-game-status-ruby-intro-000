@@ -46,17 +46,11 @@ true
 end
 
 def draw?(board)
-  if !won?(board).is_a?(Array) && full?(board)
-    return true
-  end
-false
+  !won?(board) && full?(board)
 end
 
 def over?(board)
-  if draw?(board) || won?(board) || full?(board)
-    return true
-  end
-false
+  won?(board) || full?(board)
 end
 
 def winner(board)
