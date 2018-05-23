@@ -17,15 +17,6 @@ WIN_COMBINATIONS = [
 
 def won?(board)
   WIN_COMBINATIONS.select do |row|
-    # puts "#{row}"
-    # puts row.eql?(["O","O","O"])
-    # row.select do |element|
-      # puts "#{board[element].eql?("X")}"
-    # end
-    # puts "#{row}"
-    # puts "#{row[0]} and #{row[1]} and #{row[2]}"
-    # puts "#{row[0]}"
-    # puts "#{position_taken?(board, row[0]) && board[row[0]] == board[row[1]] && board[row[1]] == board[row[2]]}"
     if position_taken?(board, row[0]) && board[row[0]] == board[row[1]] && board[row[1]] == board[row[2]]
       puts "WINNER"
       return row
